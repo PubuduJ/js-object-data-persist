@@ -1,15 +1,13 @@
 package lk.pubudu.backend.company.profile.entity;
 
 import lk.pubudu.backend.dto.DepartmentDTO;
+import lk.pubudu.backend.util.DepartmentConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -29,6 +27,7 @@ public class CompanyProfile implements Serializable {
     private String companyAddress;
     @Column(name = "established_date", nullable = false, columnDefinition = "DATE")
     private Date establishedDate;
+    @Convert(converter = DepartmentConverter.class)
     @Column(nullable = false, columnDefinition = "LONGTEXT")
     private DepartmentDTO principleDepartment;
 }
