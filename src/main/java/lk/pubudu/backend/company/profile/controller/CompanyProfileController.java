@@ -1,11 +1,27 @@
 package lk.pubudu.backend.company.profile.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.pubudu.backend.company.profile.service.CompanyProfileService;
+import lk.pubudu.backend.dto.CompanyProfileDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/company-profile")
+@RequestMapping("/api/company-profiles")
 public class CompanyProfileController {
+
+    private final CompanyProfileService companyProfileService;
+
+    @Autowired
+    public CompanyProfileController(CompanyProfileService companyProfileService) {
+        this.companyProfileService = companyProfileService;
+    }
+
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    public ResponseEntity<CompanyProfileDTO> createCompanyProfile(@RequestBody CompanyProfileDTO companyProfileDTO) {
+        companyProfileService.createCompanyProfile(companyProfileDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(companyProfileDTO);
+    }
 }
