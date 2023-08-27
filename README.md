@@ -1,4 +1,4 @@
-# Persist Entire JS Object to a DB via Spring Boot BackEnd <img src="assets/logo.png" alt="drawing" width="27px"/>
+# JS Object Data Persistence via Spring Boot BackEnd <img src="assets/logo.png" alt="drawing" width="27px"/>
 
 In this project, **company profiles web service** is exposed as an **API** under the **company profiles** resource and more information on the company profile web 
 service can be found in the below API documentation.
