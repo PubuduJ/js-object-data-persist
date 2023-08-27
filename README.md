@@ -10,10 +10,248 @@ The sample company profile hierarchy is as follows,
 <img src="assets/company_hierarchy.png" alt="splash-screen" width="900px"/>
 
 
-In this project, **company profiles web service** is exposed as an **API** under the **company profiles** resource and more information on the company profile web 
+In the project, **company profiles web service** is exposed as an **API** under the **company profiles** resource and more information on the company profile web 
 service can be found in the below API documentation.
 
 - [**Company Profiles API documentation**](https://documenter.getpostman.com/view/25306703/2s9Y5YS34g)
+
+The sample JS object that contains all the details of the sample company profile is as follows,
+
+```javascript
+company_profile_object = {
+    "companyName": "ABC (Pvt) Ltd",
+    "companyAddress": "Colombo 7, Sri Lanka",
+    "establishedDate": "2023-01-01",
+    "principleDepartment": {
+        "departmentName": "Head of the company",
+        "noOfEmployees": 1,
+        "employeeDetails": [
+            {
+                "employeeId": 1,
+                "employeeName": "Kasun De Silva",
+                "employeeDesignation": "Chief Executive Officer",
+                "responsibleDepartment": {
+                    "departmentName": "Head of the company",
+                    "noOfEmployees": 4,
+                    "employeeDetails": [
+                        {
+                            "employeeId": 2,
+                            "employeeName": "Nuwan Alwis",
+                            "employeeDesignation": "Head of Operations Department",
+                            "responsibleDepartment": {
+                                "departmentName": "Operations Department",
+                                "noOfEmployees": 2,
+                                "employeeDetails": [
+                                    {
+                                        "employeeId": 6,
+                                        "employeeName": "Prabhash Fernando",
+                                        "employeeDesignation": "General Manager Manufacturing",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Manufacturing Department",
+                                            "noOfEmployees": 3,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 13,
+                                                    "employeeName": "Chethiya Silva",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 14,
+                                                    "employeeName": "Subhash Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 15,
+                                                    "employeeName": "Kavindu Silva",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "employeeId": 7,
+                                        "employeeName": "Sahan Cooray",
+                                        "employeeDesignation": "General Manager Quality Checking",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Quality Checking",
+                                            "noOfEmployees": 2,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 16,
+                                                    "employeeName": "Ajith Ranathunga",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 17,
+                                                    "employeeName": "Sameera Wijethilaka",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "employeeId": 3,
+                            "employeeName": "Ruwan Amarasinghe",
+                            "employeeDesignation": "Head of Marketing Department",
+                            "responsibleDepartment": {
+                                "departmentName": "Marketing Department",
+                                "noOfEmployees": 2,
+                                "employeeDetails": [
+                                    {
+                                        "employeeId": 8,
+                                        "employeeName": "Gehan Hettiarachchi",
+                                        "employeeDesignation": "General Manager Sales",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Sales Department",
+                                            "noOfEmployees": 1,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 18,
+                                                    "employeeName": "Pubudu Silva",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "employeeId": 9,
+                                        "employeeName": "Ridmal De Silva",
+                                        "employeeDesignation": "General Manager Products",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Products Department",
+                                            "noOfEmployees": 2,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 19,
+                                                    "employeeName": "Senura Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 20,
+                                                    "employeeName": "Bhathiya Fernando",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "employeeId": 4,
+                            "employeeName": "Sampath Silva",
+                            "employeeDesignation": "Head of Accounts and Finance",
+                            "responsibleDepartment": {
+                                "departmentName": "Accounts and Finanace Department",
+                                "noOfEmployees": 2,
+                                "employeeDetails": [
+                                    {
+                                        "employeeId": 10,
+                                        "employeeName": "Lilan Senadeera",
+                                        "employeeDesignation": "General Manager Accounts",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Accounts Department",
+                                            "noOfEmployees": 4,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 21,
+                                                    "employeeName": "Shan Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 22,
+                                                    "employeeName": "Kevin Fernando",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 23,
+                                                    "employeeName": "Geshara Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 24,
+                                                    "employeeName": "Chamith Fernando",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "employeeId": 11,
+                                        "employeeName": "Sarith Guruge",
+                                        "employeeDesignation": "General Manager Finance",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Finanace Department",
+                                            "noOfEmployees": 1,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 25,
+                                                    "employeeName": "Govindu Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "employeeId": 5,
+                            "employeeName": "Amal Silva",
+                            "employeeDesignation": "Head of Human Resources",
+                            "responsibleDepartment": {
+                                "departmentName": "Human Resources Department",
+                                "noOfEmployees": 1,
+                                "employeeDetails": [
+                                    {
+                                        "employeeId": 12,
+                                        "employeeName": "Suraj Attanayaka",
+                                        "employeeDesignation": "General Manager Human Resouce Allocation",
+                                        "responsibleDepartment": {
+                                            "departmentName": "Head of Human Resouce Allocation Department",
+                                            "noOfEmployees": 2,
+                                            "employeeDetails": [
+                                                {
+                                                    "employeeId": 26,
+                                                    "employeeName": "Geeshan Perera",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                },
+                                                {
+                                                    "employeeId": 27,
+                                                    "employeeName": "Jude Silva",
+                                                    "employeeDesignation": "Company Member",
+                                                    "responsibleDepartment": null
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+```
 
 ## Used Technologies
 
