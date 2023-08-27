@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class CompanyProfileService {
 
@@ -24,5 +27,15 @@ public class CompanyProfileService {
     public void createCompanyProfile(CompanyProfileDTO companyProfileDTO) {
         CompanyProfile incomingCompanyProfile = transformer.toCompanyProfile(companyProfileDTO);
         companyProfileRepository.save(incomingCompanyProfile);
+    }
+
+    public List<CompanyProfileDTO> getAllCompanyProfiles() {
+        ArrayList<CompanyProfileDTO> allProfiles = new ArrayList<>();
+        List<CompanyProfile> all = companyProfileRepository.findAll();
+        for (CompanyProfile companyProfile : all) {
+            CompanyProfileDTO companyProfileDTO = transformer.toCompanyProfileDTO(companyProfile);
+            allProfiles.add(companyProfileDTO);
+        }
+        return allProfiles;
     }
 }

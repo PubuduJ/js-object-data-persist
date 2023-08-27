@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/api/company-profiles")
@@ -23,5 +25,10 @@ public class CompanyProfileController {
     public ResponseEntity<CompanyProfileDTO> createCompanyProfile(@RequestBody CompanyProfileDTO companyProfileDTO) {
         companyProfileService.createCompanyProfile(companyProfileDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(companyProfileDTO);
+    }
+
+    @GetMapping(produces = "application/json")
+    public ResponseEntity<List<CompanyProfileDTO>> getAllCompanyProfiles() {
+        return ResponseEntity.status(HttpStatus.OK).body(companyProfileService.getAllCompanyProfiles());
     }
 }
