@@ -1,5 +1,15 @@
 # JS Object Data Persistence via Spring Boot BackEnd <img src="assets/logo.png" alt="drawing" width="27px"/>
 
+This project demonstrates of saving entire **large js object** to a **relational DBMS** via **spring boot** backend.
+In here sample large js object includes **all the details of a company profile**, and it is saved as a **one single record** 
+to the **company_profile** database table. **company_profile** database table can be used to 
+save any number of company details.
+
+The sample company profile hierarchy is as follows,
+
+<img src="assets/company_hierarchy.png" alt="splash-screen" width="900px"/>
+
+
 In this project, **company profiles web service** is exposed as an **API** under the **company profiles** resource and more information on the company profile web 
 service can be found in the below API documentation.
 
