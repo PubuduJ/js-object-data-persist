@@ -13,6 +13,6 @@ import java.util.Set;
 public class DepartmentDTO implements Serializable {
     private static final long serialVersionUID = 2611854922815303303L;
     private String departmentName;
-    private String noOfEmployees;
+    private Integer noOfEmployees;
     private Set<EmployeeDetailsDTO> employeeDetails;
 }

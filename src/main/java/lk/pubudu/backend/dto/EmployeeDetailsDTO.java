@@ -13,5 +13,6 @@ public class EmployeeDetailsDTO implements Serializable {
     private static final long serialVersionUID = 2546832985237464395L;
     private Integer employeeId;
     private String employeeName;
+    private String employeeDesignation;
     private DepartmentDTO responsibleDepartment;
 }

@@ -23,6 +23,7 @@ public class CompanyProfileService {
     @Transactional(rollbackFor = Throwable.class)
     public void createCompanyProfile(CompanyProfileDTO companyProfileDTO) {
         CompanyProfile incomingCompanyProfile = transformer.toCompanyProfile(companyProfileDTO);
-        companyProfileRepository.save(incomingCompanyProfile);
+        System.out.println(incomingCompanyProfile);
+//        companyProfileRepository.save(incomingCompanyProfile);
     }
 }
