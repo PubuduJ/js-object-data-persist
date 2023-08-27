@@ -20,6 +20,7 @@ import java.util.Date;
 public class CompanyProfile implements Serializable {
     private static final long serialVersionUID = -5748043505016535782L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "company_name", nullable = false, columnDefinition = "VARCHAR(100)")
     private String companyName;
