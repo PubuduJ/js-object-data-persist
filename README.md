@@ -14,7 +14,7 @@ The sample company profile hierarchy is as follows,
 
 <img src="assets/company_hierarchy.png" alt="splash-screen" width="900px"/>
 
-The sample JS object that contains all the details of the sample company profile is as follows,
+The sample JS object that contains all the details of the sample company profile is as follows, This object is saved as a one single record to the **company_profile** database table.
 
 ```javascript
 company_profile_object = {
