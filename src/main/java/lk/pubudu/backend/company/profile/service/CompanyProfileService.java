@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CompanyProfileService {
@@ -25,8 +26,16 @@ public class CompanyProfileService {
 
     @Transactional(rollbackFor = Throwable.class)
     public void createCompanyProfile(CompanyProfileDTO companyProfileDTO) {
-        CompanyProfile incomingCompanyProfile = transformer.toCompanyProfile(companyProfileDTO);
-        companyProfileRepository.save(incomingCompanyProfile);
+        Optional<CompanyProfile> companyProfileByCompanyName = companyProfileRepository.getCompanyProfileByCompanyName(companyProfileDTO.getCompanyName());
+        if (companyProfileByCompanyName.isEmpty()) {
+            CompanyProfile incomingCompanyProfile = transformer.toCompanyProfile(companyProfileDTO);
+            companyProfileRepository.save(incomingCompanyProfile);
+        } else {
+            CompanyProfile existingCompanyProfile = companyProfileByCompanyName.get();
+            existingCompanyProfile.setCompanyAddress(companyProfileDTO.getCompanyAddress());
+            existingCompanyProfile.setEstablishedDate(companyProfileDTO.getEstablishedDate());
+            existingCompanyProfile.setPrincipleDepartment(companyProfileDTO.getPrincipleDepartment());
+        }
     }
 
     public List<CompanyProfileDTO> getAllCompanyProfiles() {

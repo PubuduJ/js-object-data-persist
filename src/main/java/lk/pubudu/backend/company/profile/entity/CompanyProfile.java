@@ -22,7 +22,7 @@ public class CompanyProfile implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "company_name", nullable = false, columnDefinition = "VARCHAR(100)")
+    @Column(name = "company_name", unique = true, nullable = false, columnDefinition = "VARCHAR(100)")
     private String companyName;
     @Column(name = "company_address", nullable = false, columnDefinition = "VARCHAR(250)")
     private String companyAddress;
