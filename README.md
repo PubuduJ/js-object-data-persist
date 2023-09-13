@@ -22,7 +22,7 @@ company_profile_object = {
     "companyAddress": "Colombo 7, Sri Lanka",
     "establishedDate": "2023-01-01",
     "principleDepartment": {
-        "departmentName": "Head of the company",
+        "departmentName": "CEO Office",
         "noOfEmployees": 1,
         "employeeDetails": [
             {
@@ -30,7 +30,7 @@ company_profile_object = {
                 "employeeName": "Kasun De Silva",
                 "employeeDesignation": "Chief Executive Officer",
                 "responsibleDepartment": {
-                    "departmentName": "Head of the company",
+                    "departmentName": "CEO Office",
                     "noOfEmployees": 4,
                     "employeeDetails": [
                         {
@@ -46,7 +46,7 @@ company_profile_object = {
                                         "employeeName": "Prabhash Fernando",
                                         "employeeDesignation": "General Manager Manufacturing",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Manufacturing Department",
+                                            "departmentName": "Manufacturing Department",
                                             "noOfEmployees": 3,
                                             "employeeDetails": [
                                                 {
@@ -75,7 +75,7 @@ company_profile_object = {
                                         "employeeName": "Sahan Cooray",
                                         "employeeDesignation": "General Manager Quality Checking",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Quality Checking",
+                                            "departmentName": "Quality Checking Department",
                                             "noOfEmployees": 2,
                                             "employeeDetails": [
                                                 {
@@ -109,7 +109,7 @@ company_profile_object = {
                                         "employeeName": "Gehan Hettiarachchi",
                                         "employeeDesignation": "General Manager Sales",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Sales Department",
+                                            "departmentName": "Sales Department",
                                             "noOfEmployees": 1,
                                             "employeeDetails": [
                                                 {
@@ -126,7 +126,7 @@ company_profile_object = {
                                         "employeeName": "Ridmal De Silva",
                                         "employeeDesignation": "General Manager Products",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Products Department",
+                                            "departmentName": "Products Department",
                                             "noOfEmployees": 2,
                                             "employeeDetails": [
                                                 {
@@ -160,7 +160,7 @@ company_profile_object = {
                                         "employeeName": "Lilan Senadeera",
                                         "employeeDesignation": "General Manager Accounts",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Accounts Department",
+                                            "departmentName": "Accounts Department",
                                             "noOfEmployees": 4,
                                             "employeeDetails": [
                                                 {
@@ -195,7 +195,7 @@ company_profile_object = {
                                         "employeeName": "Sarith Guruge",
                                         "employeeDesignation": "General Manager Finance",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Finanace Department",
+                                            "departmentName": "Finanace Department",
                                             "noOfEmployees": 1,
                                             "employeeDetails": [
                                                 {
@@ -223,7 +223,7 @@ company_profile_object = {
                                         "employeeName": "Suraj Attanayaka",
                                         "employeeDesignation": "General Manager Human Resouce Allocation",
                                         "responsibleDepartment": {
-                                            "departmentName": "Head of Human Resouce Allocation Department",
+                                            "departmentName": "Human Resouce Allocation Department",
                                             "noOfEmployees": 2,
                                             "employeeDetails": [
                                                 {
